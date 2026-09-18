@@ -12,8 +12,21 @@ To write a Python program that defines a function which accepts two values and r
 
 ## 🧾 Program
 
-Add code Here
+```
+def result(a, b):
+    modulo_value = a % b
+    return modulo_value
+
+a=int(input())
+b=int(input())
+print("modulo is", result(a, b))
+
+```
 
 ## Output
 
+<img width="848" height="398" alt="image" src="https://github.com/user-attachments/assets/3c7aca7c-63c8-4993-a2c4-267098b960f3" />
+
+
 ## Result
+Thus, the program to implement a Modulo Calculator using Functions in Python was executed successfully.
