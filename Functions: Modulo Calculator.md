@@ -1,26 +1,58 @@
-# Lambda Function in Python: Addition of Two Numbers
+# 🔺 Looping(Patterns)-Pascal's Triangle Generator in Python
+
+This project demonstrates a simple Python program to generate **Pascal’s Triangle**, where the number of rows is provided by the user.
+
+---
 
 ## 🎯 Aim
-To write a Python program that defines a **lambda function** which takes two arguments `a` and `b`, and returns their sum.
+
+To write a Python program that generates **Pascal's Triangle** using numbers. The number of rows is accepted from the user.
+
+---
 
 ## 🧠 Algorithm
-1. Get two integer inputs from the user.
-2. Use a **lambda function** to define a function `f` that returns `a + b`.
-3. Call the function with the user inputs and print the result.
 
-## 🧾 Program
+1. Start the program.
+2. Input the number of rows from the user.
+3. Loop from 0 to the number of rows.
+4. For each row:
+   - Print appropriate spaces to shape the triangle.
+   - Compute values using the formula:  
+     \[
+     C(n, k) = \frac{n!}{k!(n-k)!}
+     \]
+5. Print all rows of Pascal’s Triangle.
+6. End the program.
+
+---
+
+## 🧪 Program
 ```
-i=int(input())
-j=int(input())
-z=int(input())
+rows = int(input())
+coef = 1
 
-f = lambda a, b,c: a+b+c
+for i in range(1, rows+1):
+    for space in range(1, rows-i+1):
+        print(" ",end="")
+    for j in range(0, i):
+        if j==0 or i==0:
+            coef = 1
+        else:
+            coef = coef * (i - j)//j
+        print(coef, end = " ")
+    print()
 
-print(f(i, j,z))S
 ```
 
-## Output
-<img width="727" height="563" alt="image" src="https://github.com/user-attachments/assets/67a02963-43ac-45fa-afda-36f4d5851505" />
+## Sample Output
+
+<img width="726" height="796" alt="image" src="https://github.com/user-attachments/assets/efad68e5-0f34-4ca2-9253-5994a5949e87" />
+
+<img width="731" height="805" alt="image" src="https://github.com/user-attachments/assets/8600b65b-7dca-4d60-8e3f-b52b1bc87ba7" />
+
+
 
 ## Result
-Thus,the Python program that defines a lambda function which takes two arguments a and b, and returns their sum is created successfully.
+
+Thus,the Python program that generates Pascal's Triangle using numbers. The number of rows is accepted from the user is created successfully.
+
